@@ -65,6 +65,7 @@ catch (Exception e)
 ✅ `LeaveLobbyAsync()`
 ✅ `LeaveRoomAsync()`
 ✅ `DisconnectAsync()`
+# & M O R E!
 
 ---
 
