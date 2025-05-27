@@ -80,6 +80,22 @@ catch (Exception e)
      ```csharp
      await PhotonNetworkAsync.CreateRoomAsync("RoomWithSteve", new RoomOptions { MaxPlayers = 6 });
      ```
+
+     ```csharp
+    public async Task ConnectToPhoton(string roomCode, int maxPlayers)
+    {
+        RoomOptions roomOptions = new RoomOptions
+        {
+            IsVisible = true,
+            IsOpen = true,
+            MaxPlayers = maxPlayers,
+        };
+
+
+        await PhotonNetworkAsync.ConnectUsingSettingsAsync();
+        await PhotonNetworkAsync.JoinOrCreateRoomAsync(roomCode, roomOptions, TypedLobby.Default);
+    }
+     ```
 4. **Try/Catch everything**. Trust us—Steve *never tests things*.
 
 ---
